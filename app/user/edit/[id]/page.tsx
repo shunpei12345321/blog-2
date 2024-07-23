@@ -3,6 +3,7 @@
 import EditUser from "@/app/components/EditUser";
 import Link from "next/link";
 
+// eslint-disable-next-line @next/next/no-async-client-component
 const RecordPage = async () => {
   return (
     <div className="conatiner m-auto">
