@@ -9,6 +9,7 @@ export default function Home() {
 				<Link href="/user">[新しい投稿]</Link>
 			</div>
 			<ViewUsers />
+			<div>aaa</div>
 		</div>
 	);
 }
