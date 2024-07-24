@@ -51,11 +51,11 @@ const NewUser = () => {
 					<label htmlFor="email" className="mb-2">
 						Email
 					</label>
-					<input
+					<textarea
 						onChange={(event) => {
 							setEmail(event.target.value);
 						}}
-						type="email"
+						value={email}
 						name="email"
 						id="email"
 						className="border-2 p-2"
@@ -72,13 +72,6 @@ const NewUser = () => {
 					</button>
 				)}
 			</form>
-
-			<div className="flex flex-col w-full">
-				<p className="font-bold">REST-API Payload:</p>
-				<div className="border-2 items-center justify-center p-5 overflow-auto whitespace-normal">
-					{JSON.stringify({ name, email })}
-				</div>
-			</div>
 
 			{/* 17:53 */}
 			<div>
