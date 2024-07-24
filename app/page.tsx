@@ -3,15 +3,12 @@ import ViewUsers from "./components/ViewUsers";
 
 export default function Home() {
 	return (
-		<div className="container m-auto">
-			<div className="flex h-screen justify-between p-10">
-				<div className="flex flex-col w-1/2 items-center justify-center">
-					<p className="font-bold text-6xl mb-5">/</p>
-					<p className="font-bold text-7xl mb-10">page.tsx</p>
-					<Link href="/user">[new user]</Link>
-				</div>
-				<ViewUsers />
+		<div className="h-screen justify-center items-center">
+			<div></div>
+			<div className="flex flex-col items-center mt-3 scroll-py-5">
+				<Link href="/user">[新しい投稿]</Link>
 			</div>
+			<ViewUsers />
 		</div>
 	);
 }

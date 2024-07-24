@@ -1,5 +1,4 @@
 "use client";
-
 import { UserType } from "@/app/api/user/type";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -27,9 +26,10 @@ const ViewUsers = () => {
 	};
 
 	return (
-		<div className="w-1/2 flex flex-col ">
+		<div className="flex flex-col items-center scroll-py-5">
 			<div className="flex justify-between mb-5">
-				<p className="text-center font-bold text-3xl">Supabase: User table</p>
+				<p className="text-center font-bold text-3xl">blog table</p>
+
 				{isLoading ? (
 					<p>Reloading...</p>
 				) : (
@@ -41,7 +41,7 @@ const ViewUsers = () => {
 					</button>
 				)}
 			</div>
-			<div className="flex flex-col items-center justify-start">
+			<div className="w-2/3  px-4 py-2 border rounded-lg border-gray-700">
 				{users.map((user) => (
 					<Link
 						key={user.id}
@@ -52,8 +52,8 @@ const ViewUsers = () => {
 				))}
 			</div>
 
-			{/* 17:36分 */}
-			<div>
+			{/* 7.23 17:36分 */}
+			{/* <div>
 				<div className="flex flex-col items-center scroll-py-5">
 					<h1 className="font-bold text-5xl pt-10 pb-5">my Blogs</h1>
 					<p className="px-20">
@@ -76,7 +76,7 @@ const ViewUsers = () => {
 										edit
 									</Link>
 									<button
-										// onClick={() => handleDelete(blog)}
+										onClick={() => handleDelete(blog)}
 										className="px-3 py-1 bg-red-600 text-white rounded-full text-sm">
 										delete
 									</button>
@@ -88,7 +88,7 @@ const ViewUsers = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

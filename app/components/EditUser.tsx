@@ -80,23 +80,22 @@ const EditUser = () => {
 						className="border-2 p-2"
 					/>
 				</div>
+
 				<div className="flex flex-col mb-4">
 					<label htmlFor="email" className="mb-2">
 						Email
 					</label>
-					<input
+
+					<textarea
 						onChange={(event) => {
 							setEmail(event.target.value);
 						}}
-						type="email"
+						placeholder="Blog内容を入力" // ブランクアウト
+						value={email}
 						name="email"
 						id="email"
-						value={email}
 						className="border-2 p-2"
 					/>
-					<textarea name="" id="">
-						aaa
-					</textarea>
 				</div>
 				<div className="flex items-center justify-between">
 					{isFetching ? (
@@ -105,57 +104,20 @@ const EditUser = () => {
 						<button
 							type="button"
 							onClick={handleSubmit}
-							className="bg-blue-500 text-white px-2 py-1">
-							Submit
+							className="px-5 py-1 border-2 rounded-lg text-green-800 border-green-700 bg-green-100">
+							修正投稿
 						</button>
 					)}
 					<button
 						type="button"
 						onClick={handleDelete}
 						className="bg-red-500 text-white px-2 py-1">
-						Delete
+						削除
 					</button>
 				</div>
 			</form>
 
-			{isFetching ? (
-				<p className="text-center">Fetching...</p>
-			) : (
-				<div className="flex flex-col w-full">
-					<p className="font-bold">REST-API Payload:</p>
-					<div className="border-2 items-center justify-center p-5 overflow-auto whitespace-normal">
-						{JSON.stringify({ name, email })}
-					</div>
-				</div>
-			)}
-
 			{/* 7.24 6:54 */}
-
-			<div>
-				<div className="flex flex-col justify-center items-center">
-					<div className="w-full py-5 flex items-center justify-between">
-						<h1 className="text-5xl font-bold flex-grow text-center">
-							edit Blog
-						</h1>
-					</div>
-					<form onSubmit={handleSubmit} className="flex flex-col w-2/3 pb-5">
-						<input
-							// ref={titleRef}
-							type="text"
-							placeholder="タイトルを入力"
-							className="border-2 border-gray-500 p-2 m-2"
-						/>
-						<textarea
-							// ref={contentRef}
-							placeholder="Blog内容を入力"
-							className="border-2 border-gray-500 p-2 m-2"
-						/>
-						<button className="m-auto px-5 py-1 border-2 rounded-lg text-green-800 border-green-700 bg-green-100">
-							修正投稿
-						</button>
-					</form>
-				</div>
-			</div>
 		</div>
 	);
 };
