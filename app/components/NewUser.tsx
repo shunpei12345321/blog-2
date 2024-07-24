@@ -34,11 +34,11 @@ const NewUser = () => {
 				<p className="text-center font-bold">Form (NewUser.tsx)</p>
 				<div className="flex flex-col mb-4">
 					<label htmlFor="name" className="mb-2">
-						Name
+						タイトル
 					</label>
 					<input
-						onChange={(event) => {
-							setName(event.target.value);
+						onChange={(e) => {
+							setName(e.target.value);
 						}}
 						type="text"
 						name="name"
@@ -48,7 +48,7 @@ const NewUser = () => {
 				</div>
 				<div className="flex flex-col mb-4">
 					<label htmlFor="email" className="mb-2">
-						Email
+						内容
 					</label>
 					<textarea
 						onChange={(event) => {
