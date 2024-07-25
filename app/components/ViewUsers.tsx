@@ -28,7 +28,7 @@ const ViewUsers = () => {
 	return (
 		<div className="flex flex-col items-center scroll-py-5">
 			<div className="flex justify-between  mb-5">
-				<p className="text-center mr-3 font-bold text-3xl">blog table</p>
+				<p className="text-center  pr-3 mr-3 font-bold text-3xl">blog table</p>
 
 				{isLoading ? (
 					<p>Reloading...</p>
@@ -41,6 +41,11 @@ const ViewUsers = () => {
 					</button>
 				)}
 			</div>
+			<Link
+				className="px-5 py-1 border-2 rounded-lg text-green-800 border-green-700 bg-green-100"
+				href="/user">
+				[新しい投稿]
+			</Link>
 			<div className="w-2/3  px-4 py-2 space-y-4 flex flex-col items-center pb-10 mt-5 border rounded-lg border-gray-700">
 				{/* 1111111 */}
 				<div className="w-full space-y-4 flex flex-col items-center pb-10 mt-5">
@@ -54,7 +59,7 @@ const ViewUsers = () => {
 									<Link
 										href={`/user/edit/${users.id}`}
 										className="px-5 py-1 bg-black text-white rounded-full text-sm">
-										edit
+										編集
 									</Link>
 								</div>
 							</div>
@@ -64,7 +69,7 @@ const ViewUsers = () => {
 						</div>
 					))}
 				</div>
-				{/* この下は */}
+				{/* この下はもとのjson */}
 
 				{/* {users.map((user: UserType) => (
 					<Link
