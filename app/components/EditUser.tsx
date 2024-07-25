@@ -66,7 +66,7 @@ const EditUser = () => {
 				</div>
 				<div className="flex flex-col mb-4">
 					<label htmlFor="name" className="mb-2">
-						Name
+						タイトル
 					</label>
 					<form action=""></form>
 					<input
@@ -83,7 +83,7 @@ const EditUser = () => {
 
 				<div className="flex flex-col mb-4">
 					<label htmlFor="email" className="mb-2">
-						Email
+						名前
 					</label>
 
 					<textarea
