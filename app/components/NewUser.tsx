@@ -30,7 +30,7 @@ const NewUser = () => {
 
 	return (
 		<div className="flex flex-col space-y-10 w-1/2 p-10 items-center">
-			<form className="border-2 w-2/3 p-5">
+			<form className="border-2 border-gray-700 w-2/3 p-5">
 				<p className="text-center font-bold">Form (NewUser.tsx)</p>
 				<div className="flex flex-col mb-4">
 					<label htmlFor="name" className="mb-2">
