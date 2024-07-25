@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ViewUsers from "./components/ViewUsers";
 
 export default function Home() {
