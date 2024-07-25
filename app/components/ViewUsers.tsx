@@ -47,7 +47,6 @@ const ViewUsers = () => {
 				[新しい投稿]
 			</Link>
 			<div className="w-2/3  px-4 py-2 space-y-4 flex flex-col items-center pb-10 mt-5 border rounded-lg border-gray-700">
-				{/* 1111111 */}
 				<div className="w-full space-y-4 flex flex-col items-center pb-10 mt-5">
 					{users.map((users: UserType) => (
 						<div
