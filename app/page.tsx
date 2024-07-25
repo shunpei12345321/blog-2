@@ -6,7 +6,11 @@ export default function Home() {
 		<div className="h-screen justify-center items-center">
 			<div></div>
 			<div className="flex flex-col items-center mt-3 scroll-py-5">
-				<Link href="/user">[新しい投稿]</Link>
+				<Link
+					className="px-5 py-1 border-2 rounded-lg text-green-800 border-green-700 bg-green-100"
+					href="/user">
+					[新しい投稿]
+				</Link>
 			</div>
 			<ViewUsers />
 		</div>
