@@ -28,7 +28,7 @@ const ViewUsers = () => {
 	return (
 		<div className="flex flex-col items-center scroll-py-5">
 			<div className="flex justify-between  mb-5">
-				<p className="text-center  pr-3 mr-3 font-bold text-3xl">blog table</p>
+				<p className="text-center  pr-3 mr-3 font-bold text-5xl">UEHARA BLOG</p>
 
 				{isLoading ? (
 					<p>Reloading...</p>
@@ -44,14 +44,14 @@ const ViewUsers = () => {
 			<Link
 				className="px-5 py-1 border-2 rounded-lg text-green-800 border-green-700 bg-green-100"
 				href="/user">
-				[新しい投稿]
+				新しい投稿
 			</Link>
 			<div className="w-2/3  px-4 py-2 space-y-4 flex flex-col items-center pb-10 mt-5 border rounded-lg border-gray-700">
 				<div className="w-full space-y-4 flex flex-col items-center pb-10 mt-5">
 					{users.map((users: UserType) => (
 						<div
 							key={users.id}
-							className="w-2/3 px-4 py-2 border rounded-lg border-gray-700">
+							className="w-2/3 px-4 py-2 border  rounded-lg border-gray-700">
 							<div className="flex justify-between">
 								<h1 className="font-bold text-xl">{users.name}</h1>
 								<div className="space-x-2">
@@ -62,6 +62,8 @@ const ViewUsers = () => {
 									</Link>
 								</div>
 							</div>
+							<div></div>
+
 							<h2 className="text-sm border-b-2"></h2>
 
 							<div className="p-4">{users.email}</div>
