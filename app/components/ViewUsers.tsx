@@ -27,8 +27,8 @@ const ViewUsers = () => {
 
 	return (
 		<div className="flex flex-col items-center scroll-py-5">
-			<div className="flex justify-between mb-5">
-				<p className="text-center font-bold text-3xl">blog table</p>
+			<div className="flex justify-between  mb-5">
+				<p className="text-center mr-3 font-bold text-3xl">blog table</p>
 
 				{isLoading ? (
 					<p>Reloading...</p>
@@ -41,13 +41,37 @@ const ViewUsers = () => {
 					</button>
 				)}
 			</div>
-			<div className="w-2/3  px-4 py-2 border rounded-lg border-gray-700">
-				{users.map((user) => (
+			<div className="w-2/3  px-4 py-2 space-y-4 flex flex-col items-center pb-10 mt-5 border rounded-lg border-gray-700">
+				{/* w-full space-y-4 flex flex-col items-center pb-10 mt-5  */}
+
+				{/* この下が｛の中のやつ　.blog.　｝ */}
+
+				{/* <div className="flex justify-between">
+                <h1 className="font-bold text-xl">{blog.title}</h1>
+                <div className="space-x-2">
+                  <Link
+                    href={`/blog/edit/${blog.id}`}
+                    className="px-5 py-1 bg-black text-white rounded-full text-sm"
+                  >
+                    edit
+                  </Link>
+                  <button
+                    onClick={() => handleDelete(blog)}
+                    className="px-3 py-1 bg-red-600 text-white rounded-full text-sm"
+                  >
+                    delete
+                  </button>
+                </div>
+              </div> */}
+
+				{/*  */}
+				{users.map((user: UserType) => (
 					<Link
 						key={user.id}
 						href={`/user/edit/${user.id}`}
-						className="flex border-2 w-full px-2 py-1">
+						className="flex border-2 rounded-lg border-gray-700 w-full px-2 py-1">
 						{JSON.stringify(user)}
+						{/* userテーブルすべて取ってきてる */}
 					</Link>
 				))}
 			</div>
@@ -87,7 +111,7 @@ const ViewUsers = () => {
 							<div className="p-4">{}</div>
 						</div>
 					</div>
-				</div>
+				</div> 以前のブログ
 			</div> */}
 		</div>
 	);
